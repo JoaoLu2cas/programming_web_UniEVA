@@ -1,0 +1,99 @@
+body {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #d3d3d3;
+
+    /*margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;*/
+
+}
+
+#wrapper {
+    background-color: #fff;
+}
+
+h1 {
+    margin:1% 0% ;
+    background-color: #efefee;
+    padding: 0.25rem;
+
+
+    /*margin-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 0%;
+    margin-right: 0%;*/
+
+}
+
+ul {
+    text-align: center;
+    padding: 0;
+}
+
+h1 , p {
+    text-align: center;
+    padding: 0;
+}
+
+.content {
+    overflow: auto;
+}
+.feature , #nav, #footer {
+    margin:1% 0% ;
+}
+
+.column1, .column2, .column3{
+    width: 31.3%;
+    display: inline-block;
+    /*float: left;*/
+}
+
+.column2 {
+    margin: 0 1%;
+
+    /*margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 3%;
+    margin-right: 3%;*/
+}
+.column2{
+    margin: 0;
+}
+
+.column1, .column2, .column3{
+    padding: 10px;
+}
+
+.column1 > p, .column2 > p, .column3 > p {
+    font-weight: bold;
+    font-style: italic;
+}
+
+li {
+    display: inline;
+    padding: 0.5rem;
+}
+
+#nav, #footer {
+    background-color:#efefef ;
+    padding: 0.5rem 0rem;
+
+    /*padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;*/
+}
+
+.feature {
+    background-color:#efefef;
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+
+.article {
+    background-color:#efefef;
+    height: 25rem;
+    margin-bottom: 1rem;
+}
