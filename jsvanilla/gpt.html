@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Revisão Web</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .box {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .box div {
+      width: 50px;
+      height: 50px;
+      background: coral;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    .ativo {
+      background: green;
+      color: white;
+    }
+
+    .resultado {
+      font-size: 1.2rem;
+      color: darkblue;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="titulo">Revisão de Desenvolvimento Web</h1>
+
+    <div class="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <button id="botao">Criar Parágrafo</button>
+    <div id="saida"></div>
+
+    <input type="text" id="entrada" placeholder="Digite um número">
+    <button id="converter">Converter e Dobrar</button>
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const botao = document.getElementById("botao");
+      const saida = document.getElementById("saida");
+      const input = document.getElementById("entrada");
+      const btnConverter = document.getElementById("converter");
+      const resultado = document.getElementById("resultado");
+
+      // Click: criar parágrafo dinamicamente
+      botao.addEventListener("click", () => {
+        const novoParagrafo = document.createElement("p");
+        novoParagrafo.textContent = "Texto dinâmico";
+        novoParagrafo.classList.add("ativo");
+        saida.appendChild(novoParagrafo);
+      });
+
+      // Keypress: mostrar tecla pressionada no console
+      document.addEventListener("keypress", (e) => {
+        console.log("Tecla pressionada:", e.key);
+      });
+
+      // Conversão com parseFloat e validação com isNaN
+      btnConverter.addEventListener("click", () => {
+        const valor = parseFloat(input.value);
+        if (isNaN(valor)) {
+          resultado.textContent = "Digite um número válido!";
+          resultado.style.color = "red";
+        } else {
+          resultado.textContent = `Dobro: ${valor * 2}`;
+          resultado.style.color = "darkblue";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
